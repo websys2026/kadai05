@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>演習課題5-1：カウンタ</title>
+</head>
+<body>
+  
+  <h1><span id="counter">0</span></h1>
+
+  <button id="countBtn">カウント</button>
+  <button id="resetBtn">リセット</button>
+
+  <script>
+    let count = 0;
+
+    const counterElement = document.getElementById('counter');
+    const countBtn = document.getElementById('countBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    countBtn.addEventListener('click', function() {
+      count++;
+      counterElement.textContent = count;
+    });
+
+    resetBtn.addEventListener('click', function() {
+      count = 0;
+      counterElement.textContent = count;
+    });
+  </script>
+
+</body>
+</html>
